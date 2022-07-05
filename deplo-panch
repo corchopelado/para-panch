@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: para-panch
+  labels:
+    app: para-panch
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: para-panch
+  template:
+    metadata:
+      labels:
+        app: para-panch
+    spec:
+      containers:
+      - name: para-panch
+        image: corchopelado/gatos:latest
+        ports:
+        - containerPort: 5000
+
+---
+apiVersion: v1
+kind: Service
+metadata: 
+  name: para-panch
+spec: 
+  type: NodePort
+  ports:
+  - port: 5000
+    targetPort: 5000
+    nodePort: 30000
+  selector:
+    app: para-panch
