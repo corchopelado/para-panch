@@ -1,7 +1,7 @@
 pipeline {
 
     agent{
-        docker { }
+        docker { image 'docker' }
     }
 
     environment {
