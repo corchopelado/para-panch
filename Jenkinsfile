@@ -1,7 +1,6 @@
 pipeline {
-    agent{
-        docker { image 'docker' }
-    }
+
+    agent { label 'linux' }
 
     environment {
     DOCKERHUB_CREDENTIALS = credentials('corchopelado-dockerhub')
