@@ -1,6 +1,6 @@
 pipeline {
     agent{
-        docker { image 'linux' }
+        docker { image 'docker' }
     }
 
     environment {
