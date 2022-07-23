@@ -26,7 +26,7 @@ pipeline {
 
         stage('Push') {
             steps {
-                sh 'docker push corchopelado/para-panch:latest'
+                sh 'docker push corchopelado/para-panch:chubaca'
             }
         }
 
