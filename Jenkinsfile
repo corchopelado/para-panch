@@ -1,7 +1,7 @@
 pipeline {
 
     agent{
-        docker { image 'docker' }
+        docker { image 'docker:20.10.17-dind' }
     }
 
     environment {
