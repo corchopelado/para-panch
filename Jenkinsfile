@@ -33,6 +33,11 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "aqui nos conectamos al cluster de minikube y que ejecute la actualizacion del deployment file"
+                sh 'sed -i -e "s/%TAG%/${BUILD_NUMBER}/g" deplo-panch'
+                sh 'cat deplo-panch'
+                sh 'llamado al minikube'
+                sh 'deploy -f'
+
             }
         }
     }
