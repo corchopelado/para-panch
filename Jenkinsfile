@@ -26,7 +26,7 @@ pipeline {
 
         stage('Push') {
             steps {
-                sh 'docker push https://hub.docker.com/repository/docker/corchopelado/para-panch:latest'
+                sh 'docker push corchopelado/para-panch:latest'
             }
         }
 
