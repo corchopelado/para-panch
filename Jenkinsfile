@@ -1,7 +1,8 @@
 pipeline {
 
     agent{
-        docker { image 'docker:20.10.17-dind' }
+        /*docker { image 'docker:20.10.17-dind' }*/
+        label 'kubepod'
     }
 
     environment {
